@@ -1,98 +1,93 @@
 # 🧠 HR Management System: Strategic Workforce & Asset Insights Dashboard - Health Canada
 
-A comprehensive and interactive Power BI solution designed to provide deep insights into workforce trends, recruitment activities, asset conditions, and forecasted HR metrics—supporting strategic planning and informed decision-making across HR and finance functions.
+A comprehensive and interactive Power BI solution built on synthetic data, designed to provide deep insights into workforce trends, recruitment activities, asset conditions, and forecasted HR metrics—supporting strategic planning and informed decision-making across HR and finance functions.
 
 ---
 
 ## 📌 Short Description / Purpose
 
-The **HR Management System Dashboard** is a multi-tab Power BI report offering a holistic view of human resources, finance, and asset management across the organization. It empowers decision-makers to monitor headcount, analyze turnover, optimize recruitment spend, track asset performance, and forecast key HR metrics—enabling data-driven policy and operational strategies.
+The **HR Management System Dashboard** is a multi-tab Power BI report offering a holistic view of human resources, finance, and asset management across a fictional organization. It empowers decision-makers to monitor headcount, analyze turnover, optimize recruitment spend, track asset performance, and forecast key HR metrics.
+
+This project uses **hypothetical HR, finance, and asset data** that was **generated and preprocessed using Python**. We applied **machine learning techniques** to clean the data—handling missing values, smoothing trends, and ensuring data quality for reliable insights.
 
 ---
 
 ## 🛠 Tech Stack
 
-This dashboard was built using the following tools and technologies:
+This project was developed using:
 
-- **📊 Power BI Desktop** – Primary platform for dashboard development  
-- **📂 Power Query** – Used for data ingestion, cleaning, and transformation  
-- **🧠 DAX (Data Analysis Expressions)** – For dynamic KPIs, measures, and logic  
-- **🧱 Data Modeling** – Relationships established between employee, asset, and financial datasets  
-- **📁 File Format** – `.pbix` (Power BI report), `.csv` (data sources), `.png` (previews)
+- **📊 Power BI Desktop** – For dashboard creation and visual analytics  
+- **📂 Power Query** – For data transformation and shaping  
+- **🧠 DAX (Data Analysis Expressions)** – For KPIs and dynamic measures  
+- **🤖 Python (Pandas, NumPy, Faker, Scikit-learn)** – For:
+  - Data generation (employee, asset, finance data)
+  - ML-based cleaning (outlier detection, imputation, encoding)  
+- **🧱 Relational Modeling** – Simulated relationships between employees, assets, and financial metrics  
+- **📁 File Formats** – `.pbix`, `.csv`, `.ipynb`, `.png`
 
 ---
 
 ## 📊 Data Source
 
-**Source:** Simulated HR, Finance, and Asset Management data for Health Canada.
+This dashboard uses **simulated data** that was fully generated using Python. The dataset was designed to mimic a real-world HR environment and includes:
 
-The dataset contains:
-- Employee demographics, roles, salary, notice period, and turnover status  
-- Financial information such as recruitment costs, budget allocations, and hire sources  
-- Asset conditions, types, cost/value history, and maintenance expenditure  
-- Time-based historical and forecasted trends for departures, recruitment, and asset maintenance  
+- Employee data: Roles, salaries, gender, join/leave dates, notice periods  
+- Financial data: Recruitment budget, training costs, time-to-hire metrics  
+- Asset data: Asset types, conditions (New/Good/Fair/Poor), cost and maintenance  
+- Forecasting data: Projected departure rates, budget trends, maintenance projections  
+
+### Data Preparation Highlights:
+
+- Used `Faker` and `NumPy` to generate plausible fake data  
+- Handled missing values with ML-based imputation (e.g., KNN, regression)  
+- Removed outliers using isolation forest and z-score methods  
+- Applied label encoding and normalization for BI readiness
 
 ---
 
 ## 🔍 Features / Highlights
 
 ### 🧍‍♀️ HR Dashboard
-
-- **Count of Employees by Role**: Visualizes workforce distribution across job titles  
-- **Average Salary by Role**: Tracks compensation trends and pay equity  
-- **Current Employees vs. Leavers**: Monitors workforce inflow and outflow  
-- **Gender Distribution (Pie Chart)**: Highlights demographic balance for D&I initiatives  
-- **KPI Cards**:
-  - **Turnover Rate**: Tracks employee exits over time  
-  - **Notice Period Count**: Shows active exit processes  
-  - **Hiring Rate**: Reflects onboarding pace and recruitment efficiency
-
----
+- Count of Employees by Role  
+- Average Salary Distribution  
+- Current Employees vs. Leavers  
+- Gender Breakdown  
+- KPIs: Turnover Rate, Notice Periods, Hiring Rate  
 
 ### 💰 Finance Dashboard
-
-- **Open Vacancies & Recruitment Budget**: Show hiring demand vs. available financial resources  
-- **Total Cost by Role**: Compares average recruiting and training cost per job role  
-- **Time to Hire by Role**: Displays how long it takes to fill different positions  
-- **Hire Source (Pie Chart)**: Identifies top-performing recruitment channels  
-- **Strategic Insights**:
-  - Are budgets sufficient for current vacancies?  
-  - Which channels yield the fastest hires?  
-  - How can we reduce time-to-hire?
-
----
+- Open Vacancies & Budget Tracking  
+- Total Recruitment Cost by Role  
+- Time to Hire Analysis  
+- Hire Source Effectiveness  
 
 ### 🧾 Assets Dashboard
-
-- **Asset Condition (Pie Chart)**: Breakdown of New, Good, Fair, and Poor assets  
-- **Average Maintenance Cost by Asset Type**: Identify high-cost assets for review  
-- **Cost vs. Current Value by Asset Type**: Analyze asset depreciation and ROI  
-- **Asset Count Gauge**: Track total inventory for operational planning  
-- **Strategic Insights**:
-  - Prioritize replacements for poor/fair condition assets  
-  - Optimize spending by targeting high-maintenance categories  
-  - Improve long-term planning with cost-to-value trends
-
----
+- Asset Condition Overview (New, Good, Fair, Poor)  
+- Maintenance Cost Analysis  
+- Initial vs. Current Asset Value  
+- Asset Inventory Count  
 
 ### 🔮 Forecasting Dashboard
-
-- **Departure Rate by Year (Line Chart)**: Projects turnover trends from 2015–2030  
-- **Recruitment Expenditure Forecast**: Predicts future hiring spend  
-- **Maintenance Cost Forecast**: Forecasts upcoming asset-related expenses  
-- **Strategic Insights**:
-  - Proactively address future turnover risks  
-  - Ensure financial preparedness for recruitment and maintenance needs  
-  - Support HR planning with data-backed future projections
+- Departure Rate Forecast (2015–2030)  
+- Recruitment Expenditure Projection  
+- Maintenance Cost Forecast  
 
 ---
 
-## 📈 Business Impact & Insights
+## 📈 Business Impact & Use Case Simulation
 
-- 🚀 Improve retention strategies using historical and forecasted turnover data  
-- 💸 Align recruitment spending with vacancy demand and available budgets  
-- 🛠 Optimize asset maintenance plans based on usage and financial trends  
-- 📊 Enhance diversity, equity, and inclusion tracking  
-- 📅 Forecast future HR and operational costs for smarter planning
+- 🚀 Simulate workforce turnover and plan retention strategies  
+- 💸 Align fictional recruitment costs with hypothetical budgeting goals  
+- 🛠 Understand asset lifecycle and simulate cost-saving maintenance planning  
+- 📊 Practice DEI monitoring and HR analytics  
+- 📅 Use forecasting to simulate future HR and financial scenarios  
+- 🤖 Explore ML for cleaning and preparing organizational data for BI tools  
 
+---
+
+## 🧪 Ideal For:
+
+- Business Intelligence Students  
+- HR Analysts Learning Power BI  
+- Data Analysts Practicing Dashboard Design  
+- Anyone wanting to showcase end-to-end BI capabilities from **data generation to dashboard storytelling**
 
